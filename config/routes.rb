@@ -1,4 +1,8 @@
 PasswordSite::Application.routes.draw do
+  root :to => 'main#index'
+
+  match "/index" => "main#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
