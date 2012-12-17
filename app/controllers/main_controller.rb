@@ -1,13 +1,14 @@
-class MainController < ApplicationController
+﻿class MainController < ApplicationController
   def index
+    else
     if params[:login] == "tisha"
       if params[:password] == "12345"
-        @info = "password is correct"
+        @info = true
       else
-        @info = "password is incorrect"
+        @info = false
       end
     else
-      @info = "login is incorrect"
+      @info = false
     end
   end
 end
