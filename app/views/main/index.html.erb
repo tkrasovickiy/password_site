@@ -1,10 +1,38 @@
-﻿<% if @info == true %>
-the password is correct
-<% else %>
+﻿<% if @pass == 2 %>
+  <form method = "POST" action = "/index" />
+    <table cellpadding=5 cellspacing=0 border=0>
+      <tr>
+        <td>логин:</td>
+        <td><input type = "text" name = "login" /></td>
+      </tr>
+      <tr>
+        <td>пароль:</td>
+        <td><input type = "password" name = "password" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type = "submit" value = "Поехали!!!" /></td>
+      </tr>
+    </table>
+  </form>
+<% elsif @pass == 0 %>
   Неправильная пара логин-пароль!!!
   <form method = "POST" action = "/index" />
-    логин: <input type = "text" name = "login" />
-    пароль: <input type = "password" name = "password" />
-    <input type = "submit" />
+    <table cellpadding=5 cellspacing=0 border=0>
+      <tr>
+        <td>логин:</td>
+        <td><input type = "text" name = "login" /></td>
+      </tr>
+      <tr>
+        <td>пароль:</td>
+        <td><input type = "password" name = "password" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type = "submit" value = "Поехали!!!" /></td>
+      </tr>
+    </table>
   </form>
+<% else %>
+<H2> Welcome to our site!!! </H2>
 <% end %>

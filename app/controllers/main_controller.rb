@@ -1,14 +1,13 @@
 ﻿class MainController < ApplicationController
   def index
+    if !request.post?
+      @pass = 2
+    elsif request.post? and 
+       params[:login] == "tisha" and 
+       params[:password] == "12345"
+      @pass = 1
     else
-    if params[:login] == "tisha"
-      if params[:password] == "12345"
-        @info = true
-      else
-        @info = false
-      end
-    else
-      @info = false
+      @pass = 0
     end
   end
 end
